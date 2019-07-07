@@ -27,6 +27,7 @@ https://bootsnipp.com/snippets/Kr5yV
 			}
 		});
 	});
+	
 //////////////funcion para validar datos vacios :)
 	function validarFormVacio(formulario){
 		datos=$('#' + formulario).serialize();
