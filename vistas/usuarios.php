@@ -11,15 +11,10 @@
 	<html lang="en">
 	<head>
 		
-		<title>Inicio</title>
+		<title>Usuarios</title>
 		<?php require_once "menu.php"; ?>
 	</head>
 	<body>
-	<div class="contanier">
-		<div class="col">
-			<p>...</p>
-		</div>
-	</div>	
 
 	</body>
 	</html>

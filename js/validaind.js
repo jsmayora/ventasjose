@@ -18,7 +18,7 @@ $('#entrarSistema').click(function(){
 		data:datos,
 		url:"procesos/regLogin/login.php",
 		success:function(r){
-			if (r ==1){
+			if (r !=1){
 				window.location ="vistas/inicio.php";
 			} else {
 				alert("No se pudo acceder :( ");

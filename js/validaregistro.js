@@ -7,9 +7,9 @@ $(document).ready( function(){
 	$('#registro').click(function(){
 
 
-		vacios=validarFormVacio('frmRegistro');
-		if (vacios != 0) {
-			alert("Debes llenar los campos vacios");
+	var	vacios=validarFormVacio('frmRegistro');
+		if (vacios ==1) {
+			alertify.alert("Debes llenar los campos vacios");
 
 			return false;
 		}
@@ -20,11 +20,11 @@ $(document).ready( function(){
 			data:datos,
 			url:"procesos/regLogin/registrarUsuario.php",
 			success:function(r){
-				if (r !=0) {
-					alert("agregado con exito");
+				if (r ==1) {
+					alertify.alert("agregado con exito");
 					return true;
 				} else {
-					alert("fallo al agregar");
+					alertidy.alert("fallo al agregar");
 					// return false;
 				}
 			}
