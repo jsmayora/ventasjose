@@ -19,6 +19,7 @@ $('#btnAgregarCategoria').click(function(){
 			url:"..procesos/categorias/agregarCategorias.php",
 			success:function(r){
 				if (r == 1) {
+					$('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
 					alertify.alert("Categoria agregada con exito");
 				} else {
 					alertify.success("No se pudo agregar categoria");
