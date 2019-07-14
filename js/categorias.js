@@ -16,9 +16,11 @@ $('#btnAgregarCategoria').click(function(){
 		$.ajax({
 			type:"POST",
 			data:datos,
-			url:"..procesos/categorias/agregarCategorias.php",
+			url:"../procesos/categorias/agregarCategorias.php",
 			success:function(r){
 				if (r == 1) {
+					// esta linea permite limpiar el formulario al insertar
+					$('#frmCategorias')[0].reset();
 					$('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
 					alertify.alert("Categoria agregada con exito");
 				} else {

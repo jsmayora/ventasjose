@@ -1,3 +1,4 @@
+<div class="table-responsive">
 <table class="table table-hover table-condensend table-bordered" style="text-align: center;">
 	<caption><label>Usuarios</label> </caption>
 	<thead>
@@ -34,3 +35,5 @@
 		</tr>
 	</tbody>
 </table>
+
+</div>

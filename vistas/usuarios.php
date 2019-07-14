@@ -1,7 +1,7 @@
 <?php  
 
-// session_start();
-// if (isset($_SESSION['usuario'])) {
+session_start();
+if (isset($_SESSION['usuario'])) {
 	# code...
 	// echo $_SESSION['usuario'];
 
@@ -53,7 +53,7 @@
 </body>
 </html>
 <?php 
-// } else{
-// 	header("location:../index.php");
-// }
+} else{
+	header("location:../index.php");
+}
 ?>

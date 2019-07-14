@@ -1,10 +1,10 @@
-<!--  <?php  
+  <?php  
 
- // session_start(); if (isset($_SESSION['usuario'])) {
+ session_start(); if (isset($_SESSION['usuario'])) {
 	# code...
  	// echo $_SESSION['usuario'];
 
- 	?> -->
+ 	?> 
 
  	<!DOCTYPE html>
  	<html lang="en">
@@ -39,4 +39,5 @@
  		<script type="text/javascript" src="../js/categorias.js"></script>
  	</body>
  	</html>
-  <?php  //} // else{ 	// header("location:../index.php"); } ?>  
+  <?php } else{ 
+  	 header("location:../index.php"); } ?>  

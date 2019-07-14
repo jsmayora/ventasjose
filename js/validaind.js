@@ -4,22 +4,23 @@ $(document).ready(function(){
 $('#entrarSistema').click(function(){
 
 	vacios=validarFormVacio('frmLogin');
-	alert(vacios);
-	if (vacios ==1) {
+	// alert(vacios);
+	if (vacios == 0) {
 		alert("Debes llenar los campos vacios");
 
 		return false;
 	}
 
-	datos=$('#entrarSistema').serialize();
-	alert(datos);
+	datos=$('#frmLogin').serialize();
+	// alert(datos);
 	$.ajax({
 		type:"POST",
 		data:datos,
 		url:"procesos/regLogin/login.php",
 		success:function(r){
-			if (r !=1){
+			if (r==1){
 				window.location ="vistas/inicio.php";
+				// return 1;
 			} else {
 				alert("No se pudo acceder :( ");
 			}

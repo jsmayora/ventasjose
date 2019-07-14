@@ -1,7 +1,7 @@
 <?php  
 
-// session_start();
-// if (isset($_SESSION['usuario'])) {
+session_start();
+if (isset($_SESSION['usuario'])) {
 	# code...
 	// echo $_SESSION['usuario'];
 
@@ -20,17 +20,16 @@
 		<div class="row">
 			<div class="col-sm-12">
 
-				<span class="btn btn-primary"> Vender productos</span>		
-				<span class="btn btn-primary">Ventas hechas</span>		
+				<span class="btn btn-primary" id="VentaProductosBtn"> Vender productos</span>		
+				<span class="btn btn-primary" id="VentasHechasBtn">Ventas hechas</span>		
 			</div>
 
 		</div>
 
 		<div class="row">
-			<div class="col-sm-8">
-				<div class="tablaVentas" id="tablaVentas">
-					
-				</div>
+			<div class="col-sm-12">
+				<div class="VentaProductos" id="VentaProductos"></div>
+				<div class="VentasHechas" id="VentasHechas"></div>
 			</div>
 		</div>
 	</div>
@@ -39,10 +38,12 @@
 
 
 	<script type="text/javascript" src="../js/ventas.js"></script>
+	<script type="text/javascript" src="../js/ventas/ventasDeProductos.js"></script>
+	<script type="text/javascript" src="../js/ventas/ventasReportes.js"></script>
 </body>
 </html>
 <?php 
-// } else{
-// 	header("location:../index.php");
-// }
+} else{
+	header("location:../index.php");
+}
 ?>

@@ -54,14 +54,14 @@ class usuarios
 		$conectar = $objConectar->conexion();
 		$password = sha1($datos[1]);
 
-		$_POST['usuario'] = $datos[0];
-		$_SESSION['iduser'] =  self::traeID($datos);
-
+		echo $_SESSION['usuario'] = $datos[0];
+		echo	$_SESSION['iduser'] =  self::traeID($datos);
+exit;
 		$sql = 
 		"SELECT * FROM  usuarios
 		WHERE email= '$datos[0]' 
 		AND password='$password'";	
-
+		echo $sql;exit;
 		$resultado = $conectar->query($sql);
 
 		if ($resultado->num_rows > 0) {

@@ -5,13 +5,15 @@ require_once "../../clases/Conexion.php";
 require_once "../../clases/Usuarios.php";
 
 $obj= new usuarios();
-
-echo $datos = array(
+// echo $usuario = $_POST['usuario'];
+// echo $password = $_POST['password'];
+ $datos = array(
 	$_POST['usuario'],
 	$_POST['password']
 );
 
-// echo $obj->loginUser($datos);
+
+echo $obj->loginUser($datos);
 
 
 ?>
