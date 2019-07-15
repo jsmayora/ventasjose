@@ -7,7 +7,7 @@ $('#tablaUsuario').load('usuarios/tablaUsuarios.php');
 $('#btnAgregarUsuario').click(function(){
 
 	var	vacios=validarFormVacio('frmUsuarios');
-	if (vacios != 0) {
+	if (vacios > 0) {
 		alertify.alert("Debes llenar los campos vacios");
 
 		return false;

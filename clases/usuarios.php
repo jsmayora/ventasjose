@@ -53,15 +53,15 @@ class usuarios
 		$objConectar = new conectar();
 		$conectar = $objConectar->conexion();
 		$password = sha1($datos[1]);
-
-		echo $_SESSION['usuario'] = $datos[0];
-		echo	$_SESSION['iduser'] =  self::traeID($datos);
-exit;
+// echo "\nEstoy en función login usuario\n".$datos[0]."\n" . $datos[1]. "\n". $password;exit;
+		$_SESSION['usuario'] = $datos[0];
+		$_SESSION['id_usuario'] =  self::traeID($datos);
+// exit;
 		$sql = 
 		"SELECT * FROM  usuarios
 		WHERE email= '$datos[0]' 
 		AND password='$password'";	
-		echo $sql;exit;
+		// echo $sql;exit;
 		$resultado = $conectar->query($sql);
 
 		if ($resultado->num_rows > 0) {
@@ -77,12 +77,15 @@ exit;
 	public function traeID($datos){
 		$objConectar = new conectar();
 		$conectar = $objConectar->conexion();
+		$password=sha1($datos[1]);
 		$sql= "
 		SELECT  id_usuario FROM  usuarios
-		WHERE  email = '$datos[0]',
+		WHERE  email = '$datos[0]'
 		AND	   password ='$password'";
 		$resultado=$conectar->query($sql);
-		return $conectar->fecth_row($resultado)[0];
+
+		
+		return $resultado->num_rows[0];
 
 	}
 }

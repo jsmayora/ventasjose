@@ -9,8 +9,8 @@ $pass = sha1($_REQUEST['password']);
 $datos = array( 
 	$_REQUEST['nombre'],
 	$_REQUEST['apellido'],
-	// $_REQUEST['email'],
-	$_REQUEST['usuario'],
+	$_REQUEST['email'],
+	// $_REQUEST['usuario'],
 	$pass
 );
 echo $obj->registroUsuario($datos);

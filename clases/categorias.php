@@ -13,18 +13,9 @@ class categorias
 		$conectar = $objConectar->conexion();
 
 		$sql = "
-		INSERT INTO categorias (
-		id_usuario,
-		nombreCategoria,
-		fechaCaptura 
-		)
-		VALUES 
-		( '$datos[0]',
-		  '$datos[1]',
-		  '$datos[2]')
-
-		";
-
+		INSERT INTO categorias(id_usuario,nombreCategoria,fechaCaptura)
+		VALUES ('$datos[0]','$datos[1]','$datos[2]')";
+echo $sql;exit;
 		return $conectar->query($sql);
 
 	}

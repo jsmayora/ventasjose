@@ -5,9 +5,10 @@ require_once "../../clases/conexion.php";
 require_once "../../clases/categorias.php";
 
 $fecha = date('Y-m-d');
-$idusaurio = $_SESSION['iduser'];
-$categoria = $_POST['categoria'];
+$idusaurio = $_SESSION['id_usuario'];
+$categoria = $_REQUEST['categoria'];
 
+// echo "idusaurio=\n" .$idusaurio."\n"."categorias=\n".$categoria ."\nFecha=\n" .$fecha; exit;
 $datos = array(
 	
 	$idusaurio,

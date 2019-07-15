@@ -5,7 +5,7 @@ $('#entrarSistema').click(function(){
 
 	vacios=validarFormVacio('frmLogin');
 	// alert(vacios);
-	if (vacios == 0) {
+	if (vacios > 0) {
 		alert("Debes llenar los campos vacios");
 
 		return false;

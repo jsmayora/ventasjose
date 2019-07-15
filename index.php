@@ -16,7 +16,6 @@ if ($resultado->num_rows > 0) {
 	$validar = 1;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -6,7 +6,7 @@ $('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
 $('#btnAgregarCategoria').click(function(){
 
 	var	vacios=validarFormVacio('frmCategorias');
-	if (vacios != 0) {
+	if (vacios > 0) {
 		alertify.alert("Debes llenar los campos vacios");
 
 		return false;
