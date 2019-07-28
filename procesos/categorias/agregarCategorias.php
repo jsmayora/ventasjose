@@ -1,22 +1,22 @@
 <?php
-
+// session_id();
 session_start();
 require_once "../../clases/conexion.php";
 require_once "../../clases/categorias.php";
 
-$fecha = date('Y-m-d');
-$idusaurio = $_SESSION['id_usuario'];
-$categoria = $_REQUEST['categoria'];
+	$fecha=date("Y-m-d");
+	$idusuario=$_SESSION['iduser'];
+	 $categoria=$_POST['categoria'];
 
-// echo "idusaurio=\n" .$idusaurio."\n"."categorias=\n".$categoria ."\nFecha=\n" .$fecha; exit;
-$datos = array(
-	
-	$idusaurio,
-	$categoria,
-	$fecha
-); 
+// echo "id= ".
+// echo " categoria ". exit();
+	$datos=array(
+		$idusuario,
+		$categoria,
+		$fecha
+				);
 
-$objcategoria = new categorias();
+	$obj= new categorias();
+	echo $obj->agregaCategoria($datos);
 
- echo $objcategoria->agregarCategoria($datos);
 ?>

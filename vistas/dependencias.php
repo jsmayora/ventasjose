@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" href="../css/menu.css">
 
 
-<script src="../librerias/jquery-3.2.1.min.js"></script>
-<script src="../librerias/alertifyjs/alertify.js"></script>
-<script src="../librerias/bootstrap/js/bootstrap.js"></script>
-<script src="../librerias/select2/js/select2.js"></script>
-<script src="../js/funciones.js"></script>
+<script type="text/javascript"  src="../librerias/jquery-3.2.1.min.js"></script>
+<script type="text/javascript"  src="../librerias/alertifyjs/alertify.js"></script>
+<script type="text/javascript"  src="../librerias/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript"  src="../librerias/select2/js/select2.js"></script>
+<script type="text/javascript"  src="../js/funciones.js"></script>
 <script type="text/javascript" src="../js/funciones.js"></script>

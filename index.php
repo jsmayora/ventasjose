@@ -5,15 +5,15 @@ require_once "clases/conexion.php";
 $obj = new conectar();
 $conexion = $obj->conexion();
 
-$sql = "
-SELECT * FROM usuarios 	
-WHERE  email='jmayora'";
+$sql = "SELECT * FROM usuarios 	where email='jmayora'";
 
 $resultado = $conexion->query($sql);
 $validar=0;
 if ($resultado->num_rows > 0) {
 		# code...
 	$validar = 1;
+
+
 }
 ?>
 <!DOCTYPE html>
@@ -42,9 +42,8 @@ if ($resultado->num_rows > 0) {
 							<img src="img/ventas.jpg" height="190">
 						</div>
 
-
 						<form class="form" id="frmLogin"  >
-							<!-- action="php/registro.php"method="post"  -->
+							
 							<iput type="hidden" name="submit" value="1" />
 
 							<label>Usuario</label>
@@ -57,8 +56,8 @@ if ($resultado->num_rows > 0) {
 							<span class="btn btn-primary" id="entrarSistema" name="entrarSistema">Entrar</span>
 							
 							<?php if (!$validar):
-							?>
-							<a href="registro.php" class="btn btn-danger">Registro</a>
+								?>
+								<a href="registro.php" class="btn btn-danger">Registro</a>
 							<?php endif;  ?>
 						</form>
 					</div>

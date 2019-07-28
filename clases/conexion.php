@@ -6,14 +6,14 @@
  */
 class conectar{
 	private $host = "localhost";
-	private $user = "root";
-	private $password = "cltch2984";
+	private $user = "pruebas";
+	private $password = "pruebas";
 	private $bd = "ventas";
 	
 	public function conexion()
 	{
 		// conectarse a la bd
-		$conexion = new mysqli(	$this->host,$this->user,$this->password,$this->bd);
+		$conexion = new mysqli($this->host,$this->user,$this->password,$this->bd);
 
 		//  forma 1
 		// return $conexion;
