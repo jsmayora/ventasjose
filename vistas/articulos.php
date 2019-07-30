@@ -5,34 +5,49 @@ if (isset($_SESSION['usuario'])) {
 	# code...
 	// echo $_SESSION['usuario'];
 
-?>
+	?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
 
-	<title>Inicio</title>
-	<?php require_once "menu.php"; ?>
-</head>
-<body>
-	
-	<div class="container">
-		<h1>Articulos</h1>
-		<div class="row">
-			<div class="col-sm-4">
-				<form action="" id="frmArticulos" enctype="multipart/form-data">
+		<title>Inicio</title>
+		<?php
+		require_once "menu.php";
+		require_once "../clases/conexion.php";
+
+		$objConectar = new conectar();
+		$conectar = $objConectar->conexion();
+
+		$conectar->seleccionarCategoria();
+
+		?>
+	</head>
+	<body>
+
+		<div class="container">
+			<h1>Articulos</h1>
+			<div class="row">
+				<div class="col-sm-4">
+					<form action="" id="frmArticulos" enctype="multipart/form-data">
 
 
-					<label>Selecciona Categoria</label>
-					<select name="" id="input" class="form-control input-sm" name="categoriaSelect" id="categoriaSelect">
-						<option value="A">Selecciona Categoria</option>
+						<label>Selecciona Categoria</label>
+						<select name="" id="input" class="form-control input-sm" name="categoriaSelect" id="categoriaSelect">
+							<option value="A">Selecciona Categoria</option>
+							<?php 
+							while ($fila= $resultado->fetch_row()):
+
+								?>
+							<option value="<?php echo $fila[0]; ?>"><?php echo $fila[1]; ?>	</option>
+						<?php  endwhile; ?>
 					</select>
 					<label>Nombre</label>
 					<input type="text" name="nombre" id="nombre" class="form-control input-sm" value=""  title="">
 
 					<label for="">Categoria</label>
 					<input type="text" class="form-control input-sm" name="categoria" id="categoria"></input>
-					
+
 					<label>Descripción</label>
 					<input type="text" name="descripcion" id="descripcion" class="form-control input-sm" value=""  title="">
 
@@ -51,7 +66,7 @@ if (isset($_SESSION['usuario'])) {
 
 				</form>
 
-				
+
 			</div>
 			<div class="col-sm-8">
 				<div id="tablaArticulosLoad"></div>
@@ -65,8 +80,8 @@ if (isset($_SESSION['usuario'])) {
 </body>
 </html>
 <?php 
- } 
- else{
- 	header("location:../index.php");
- }
+} 
+else{
+	header("location:../index.php");
+}
 ?>

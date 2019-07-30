@@ -19,10 +19,16 @@ if ($resultado->num_rows > 0) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+	<!-- <meta charset="UTF-8"> -->
 	<title>Login de usuario</title>
 	<link rel="stylesheet" type="text/css" href="librerias/bootstrap/css/bootstrap.css"/>
-	<script type="text/javascript" src="librerias/jquery-3.2.1.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
+	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
+	
+
+	
 </head>
 <body  style="background: gray;">
 	<br><br><br>
@@ -66,6 +72,11 @@ if ($resultado->num_rows > 0) {
 			</div>
 			<!-- fin de la fila que contiene al  login -->
 		</div>
+
+		<script type="text/javascript"  src="librerias/alertifyjs/alertify.js"></script>
+		<script type="text/javascript" src="librerias/jquery-3.2.1.min.js"></script>
+
+
 		<script type="text/javascript" src="js/validaind.js"></script>
 		<script type="text/javascript" src="js/funciones.js"></script>
 	</body>

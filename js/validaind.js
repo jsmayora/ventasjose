@@ -3,10 +3,10 @@ $(document).ready(function(){
 // alert("activo js");
 $('#entrarSistema').click(function(){
 
-	vacios=validarFormVacio('frmLogin');
+	 vacios=validarFormVacio('frmLogin');
 	// alert(vacios);
 	if (vacios > 0) {
-		alert("Debes llenar los campos vacios");
+		alertify.alert("Debes llenar los campos vacios");
 
 		return false;
 	}
@@ -22,9 +22,12 @@ $('#entrarSistema').click(function(){
 				window.location ="vistas/inicio.php";
 				// return 1;
 			} else {
-				alert("No se pudo acceder :( ");
+				alertify.error("No se pudo acceder :( ");
 			}
 		}
 	});
 });
+
+
+
 });

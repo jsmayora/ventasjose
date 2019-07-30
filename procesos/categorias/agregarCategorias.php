@@ -8,8 +8,8 @@ require_once "../../clases/categorias.php";
 	$idusuario=$_SESSION['iduser'];
 	 $categoria=$_POST['categoria'];
 
-// echo "id= ".
-// echo " categoria ". exit();
+// echo "id= ". $idusuario;
+// echo " categoria= ". $categoria; exit();
 	$datos=array(
 		$idusuario,
 		$categoria,

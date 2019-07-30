@@ -36,7 +36,7 @@ $resultado = $conexion->query($sql);
 
 						</td>
 						<td>
-							<span class="btn btn-danger btn-xs" onclick="">
+							<span class="btn btn-danger btn-xs" onclick="eliminaCategoria('<?php echo $fila[0]; ?>')">
 								<span class="glyphicon glyphicon-remove"></span>
 							</span>
 						</td>

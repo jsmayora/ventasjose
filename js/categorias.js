@@ -5,6 +5,7 @@ $('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
 
 $('#btnAgregarCategoria').click(function(){
 
+// agregar categoria
 	var	vacios=validarFormVacio('frmCategorias');
 	if (vacios > 0) {
 		alertify.alert("Debes llenar los campos vacios");
@@ -43,8 +44,8 @@ $('#btnactualizaCategoria').click(function(){
 			if (r==1) {
 
 				$('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
-				// alertify.succes("Actualizador categoria con exito");
-				alert(r);
+				alertify.success("Actualizador categoria con exito");
+				
 			} else {
 				alertify.error("No se pudo actualizar");
 			}
@@ -55,8 +56,30 @@ $('#btnactualizaCategoria').click(function(){
 
 });
 // Editar datos modal
-function agregaDato(id_categoria,categoria){
+function agregaDato(idcategoria,categoria){
 	// alert("Estoy en agregaDato");
-	$('#id_categoria').val(id_categoria);
+	$('#id_categoria').val(idcategoria);
 	$('#categoriaU').val(categoria);
+}
+
+// Eliminar registro de la tbl
+function eliminaCategoria(idcategoria){
+	alertify.confirm('¿Desea eliminar esta categoria?', function(){
+		$.ajax({
+			type:"POST",
+			data:"idcategoria=" + idcategoria,
+			url:"../procesos/categorias/eliminaCalegoria.php",
+			success:function(r){
+				if(r==1){
+					$('#tablaCategoriaLoad').load('categorias/tablaCategorias.php');
+					alertify.success("Eliminado con exito");
+				} else{
+					alertify.error("No se pudo eliminar");
+				}
+
+			}
+		});
+	}, function(){
+		alertify.error('Cancelado!');
+	});
 }

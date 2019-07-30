@@ -17,7 +17,7 @@ class usuarios
 		nombre,
 		apellido,
 		email,
-		-- usuario,
+
 		password,
 		fechaCaptura) VALUES(
 		'$datos[0]',

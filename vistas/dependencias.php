@@ -14,4 +14,4 @@
 <script type="text/javascript"  src="../librerias/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript"  src="../librerias/select2/js/select2.js"></script>
 <script type="text/javascript"  src="../js/funciones.js"></script>
-<script type="text/javascript" src="../js/funciones.js"></script>
+<!-- <script type="text/javascript" src="../js/funciones.js"></script>  -->
