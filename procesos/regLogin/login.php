@@ -1,15 +1,15 @@
-<?php 
+<?php
 // session_id();
 session_start();
 
-require_once "../../clases/Conexion.php";
-require_once "../../clases/Usuarios.php";
+require_once "../../clases/conexion.php";
+require_once "../../clases/usuarios.php";
 
 $obj= new usuarios();
 // $usuario = $_POST['usuario'];
 //  $password = $_POST['password'];exit;
  $datos = array(
- 	
+
 	$_POST['usuario'],
 	$_POST['password']
 );

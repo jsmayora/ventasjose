@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once "clases/conexion.php";
 
@@ -26,9 +26,9 @@ if ($resultado->num_rows > 0) {
 
 	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/alertify.css">
 	<link rel="stylesheet" type="text/css" href="librerias/alertifyjs/css/themes/default.css">
-	
 
-	
+
+
 </head>
 <body  style="background: gray;">
 	<br><br><br>
@@ -41,7 +41,7 @@ if ($resultado->num_rows > 0) {
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
 				<div class=" panel panel-primary ">
-					<div class="panel panel-heading bg-primary "  style="padding: 4%;">Sistema de ventas y almacen</div> 	
+					<div class="panel panel-heading bg-primary "  style="padding: 4%;">Sistema de ventas y almacen</div>
 					<div class="panel panel-body"  style="padding: 4%;">
 
 						<div style="text-align: center;">
@@ -49,18 +49,18 @@ if ($resultado->num_rows > 0) {
 						</div>
 
 						<form class="form" id="frmLogin"  >
-							
+
 							<iput type="hidden" name="submit" value="1" />
 
 							<label>Usuario</label>
 							<input type="text"  class="form-control input-sm" id="usuario" name="usuario">
 
 							<label>Password</label>
-							<input type="password"  class="form-control input-sm" id="password" name="password">	
-							
+							<input type="password"  class="form-control input-sm" id="password" name="password">
+
 							<p></p>
 							<span class="btn btn-primary" id="entrarSistema" name="entrarSistema">Entrar</span>
-							
+
 							<?php if (!$validar):
 								?>
 								<a href="registro.php" class="btn btn-danger">Registro</a>

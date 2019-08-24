@@ -1,15 +1,15 @@
-<?php 
+<?php
 
 // CLase que se conecta a la base de datos
 /**
- * 
+ *
  */
 class conectar{
 	private $host = "localhost";
-	private $user = "pruebas";
-	private $password = "pruebas";
+	private $user = "root";
+	private $password = "cltch2984";
 	private $bd = "ventas";
-	
+
 	public function conexion()
 	{
 		// conectarse a la bd
@@ -28,10 +28,10 @@ class conectar{
 			// echo "\nSe conecto\n",
 			//  "<br>" .
 			 $conexion->host_info .
-			   $conexion->select_db($this->bd); 
+			   $conexion->select_db($this->bd);
 			return $conexion;
 		}
-		
+
 	}
 }
 
